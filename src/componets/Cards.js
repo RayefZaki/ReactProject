@@ -1,17 +1,14 @@
+
 import {
-  Heading,
-  Avatar,
   Box,
   Center,
-   Image,
-  Flex,
+  Heading,
   Text,
   Stack,
-  Button,
+  Avatar,
   useColorModeValue,
-  
-   Img,
-} from '@chakra-ui/react';
+  Image,
+} from '@chakra-ui/react'
 
 
 export default function Cards(props) {
@@ -29,48 +26,56 @@ let coll ;
   return (
     <Center py={6}>
       <Box
-        maxW={'270px'}
+        maxW={'445px'}
         w={'full'}
-        bg={useColorModeValue('#edf2f7', 'gray.800')}
+        bg={useColorModeValue('white', 'gray.900')}
         boxShadow={'2xl'}
         rounded={'md'}
+        p={6}
         overflow={'hidden'}>
-        <Flex justify={'center'} mt={3}>
-          <Avatar
-          
-           objectFit={'cover'}
-            size={'xl'}
-            src = {props.Img}
-            alt={'Author'}
-            css={{
-              border: '2px solid white',
-            }}
+        <Box
+          h={'210px'}
+          bg={'gray.100'}
+          mt={-6}
+          mx={-6}
+          mb={6}
+          pos={'relative'}>
+          <Image
+            src={
+             props.Img
+            }
+            layout={'fill'}
           />
-        </Flex>
-
-        <Box p={6}>
-          <Stack spacing={0} align={'right'} mb={5}>
-            <Heading dir="rtl" align={'center'} fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
-              {props.Name}
-            </Heading>
-            <Text dir="rtl" align={'right'} color={'gray.500'}>
-              <br/>
-              <br/>
-              {props.Description}</Text>
-          </Stack>
-          <Button
-            w={'full'}
-            mt={-3}
-            bg={useColorModeValue(coll, 'gray.900')}
-            color={'white'}
-            rounded={'md'}
-            _hover={{
-              transform: 'translateY(-2px)',
-              boxShadow: 'lg',
-            }}>
-              {vall}
-          </Button>
         </Box>
+        <Stack>
+          <Text
+            color={'green.500'}
+            textTransform={'uppercase'}
+            fontWeight={800}
+            fontSize={'sm'}
+            letterSpacing={1.1}>
+            
+          </Text>
+          <Heading
+            color={useColorModeValue('gray.700', 'white')}
+            fontSize={'2xl'}
+            fontFamily={'body'}>
+            {props.Name}
+          </Heading>
+          <Text color={'gray.500'}>
+          {props.Description}
+          </Text>
+        </Stack>
+        <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
+          <Avatar
+            src={'https://avatars0.githubusercontent.com/u/1164541?v=4'}
+            alt={'Author'}
+          />
+          <Stack direction={'column'} spacing={0} fontSize={'sm'}>
+            <Text fontWeight={600}>Achim Rolle</Text>
+            <Text color={'gray.500'}>Feb 08, 2021 · 6min read</Text>
+          </Stack>
+        </Stack>
       </Box>
     </Center>
   );

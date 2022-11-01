@@ -1,4 +1,4 @@
-/* 
+
 
 .nav1{
   display:flex;
@@ -15,6 +15,10 @@ a{
 .Card{
   display: grid;
   grid-template-columns: repeat(3,2fr);
-  background-color: #BEE3F8;
-} */
+  background-color: gray;
+}
+.Search{
+  background-color: blue;
+  border: 20px solid black;
+}
 
