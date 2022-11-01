@@ -41,9 +41,7 @@ let coll ;
           mb={6}
           pos={'relative'}>
           <Image
-            src={
-             props.Img
-            }
+            src={ props.Img }
             layout={'fill'}
           />
         </Box>
